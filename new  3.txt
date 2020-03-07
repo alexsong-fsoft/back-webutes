@@ -1,0 +1,5 @@
+" SELECT	* 																			"
++ " from 	sys_usuario USU inner join sys_perfil PER ON USU.fk_prf = PER.id_prf        "
++ " where 	PER.prf_nombre = 'DOCENTE'                                                  "
++ " 	AND fk_per NOT IN (select fk_per FROM tema t WHERE t.id_tem = 217)              "
++ " 	AND fk_per IN (select fk_per FROM seleccion s WHERE s.fk_prd = 6)               "
